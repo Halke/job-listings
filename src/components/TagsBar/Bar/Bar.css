@@ -3,6 +3,8 @@
   width: 80%;
   padding: 15px 20px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--background-light_gray);
@@ -13,12 +15,22 @@
 }
 
 .bar__tags {
-  width: 90%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
 }
 
 .bar__clear-btn {
-  width: 10%;
+  width: 40px;
+  height: 18px;
+  color: var(--primary-dark_red);
+  border: none;
+  background-color: transparent;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.bar__clear-btn:hover {
+  border-bottom: 2px solid var(--primary-dark_red);
 }
