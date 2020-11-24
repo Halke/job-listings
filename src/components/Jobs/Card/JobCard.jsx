@@ -2,6 +2,7 @@ import React from 'react'
 import "./JobCard.css";
 import "../JobCardHeader/JobCardHeader";
 import JobCardHeader from '../JobCardHeader/JobCardHeader';
+import JobCardFooter from "../JobCardFooter/JobCardFooter";
 
 function JobCard({logoUrl, companyName, newPost, featuredPost, position}) {
     return (
@@ -11,21 +12,17 @@ function JobCard({logoUrl, companyName, newPost, featuredPost, position}) {
                 alt="Company logo" 
             />
             <div className="job-card__description">
-                <div className="job-card__description-head">
-                    <JobCardHeader 
-                        companyName={companyName} 
-                        newPost={newPost}
-                        featuredPost={featuredPost}
-                    />
-                </div>
+                <JobCardHeader 
+                    companyName={companyName} 
+                    newPost={newPost}
+                    featuredPost={featuredPost}
+                />
                 <div className="job-card__description-job-title-sect">
                     <h2 className="job-card__description-job-title">
                         {position}
                     </h2>
                 </div>
-                <div>
-                    
-                </div>
+                <JobCardFooter />
             </div>
             <div className="job-card__tags">
 
