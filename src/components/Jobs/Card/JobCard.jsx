@@ -3,8 +3,9 @@ import "./JobCard.css";
 import "../JobCardHeader/JobCardHeader";
 import JobCardHeader from '../JobCardHeader/JobCardHeader';
 import JobCardFooter from "../JobCardFooter/JobCardFooter";
+import Tag from "../../TagsBar/Tag/Tag";
 
-function JobCard({logoUrl, companyName, newPost, featuredPost, position}) {
+function JobCard({logoUrl, companyName, newPost, featuredPost, position, tags}) {
     return (
         <div className="job-card">
             <img className="job-card__image" 
@@ -25,7 +26,7 @@ function JobCard({logoUrl, companyName, newPost, featuredPost, position}) {
                 <JobCardFooter />
             </div>
             <div className="job-card__tags">
-
+                {tags.map((tag, index) => <Tag key={index} title={tag} removeable={false}/>)}
             </div>
         </div>
     )
