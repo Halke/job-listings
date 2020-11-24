@@ -1,10 +1,15 @@
 import React from "react";
 import './App.css';
+import Header from "./components/Header/Header";
+import Bar from "./components/TagsBar/Bar/Bar"
 
 function App() {
   return (
     <div className="App">
-      Welcome to <stron>Job Listing</stron> app.
+      <Header />
+      <div className="App__bar-section">
+        <Bar />
+      </div>
     </div>
   );
 }
