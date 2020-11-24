@@ -7,7 +7,9 @@
   transform: translateX(-50%);
   background-color: var(--background-light_gray);
   top: -25px;
-  border-radius: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
 }
 
 .bar__tags {
