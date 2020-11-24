@@ -3,7 +3,7 @@ import "./JobCard.css";
 import "../JobCardHeader/JobCardHeader";
 import JobCardHeader from '../JobCardHeader/JobCardHeader';
 
-function JobCard({logoUrl, companyName, newPost, featuredPost}) {
+function JobCard({logoUrl, companyName, newPost, featuredPost, position}) {
     return (
         <div className="job-card">
             <img className="job-card__image" 
@@ -18,8 +18,13 @@ function JobCard({logoUrl, companyName, newPost, featuredPost}) {
                         featuredPost={featuredPost}
                     />
                 </div>
-                <div className="job-card__description-job-title">
-
+                <div className="job-card__description-job-title-sect">
+                    <h2 className="job-card__description-job-title">
+                        {position}
+                    </h2>
+                </div>
+                <div>
+                    
                 </div>
             </div>
             <div className="job-card__tags">
