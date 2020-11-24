@@ -19,3 +19,10 @@ h5,
 h6 {
   font-family: "Spartan", sans-serif;
 }
+
+body {
+  max-width: 1440px;
+}
+
+@media screen and (max-width: 375px) {
+}
