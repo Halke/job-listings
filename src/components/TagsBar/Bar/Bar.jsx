@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Bar.css";
+import Tag from "../Tag/Tag";
 
 function Bar() {
 
@@ -10,9 +11,11 @@ function Bar() {
     return (
         <div className="bar">
             <div className="bar__tags">
-                
+                <Tag title="Frontend" />
+                <Tag title="Backend" />
+                <Tag title="Junior" />
             </div>
-            <button className="bar__clear-bar" onClick={handleOnClear}>
+            <button className="bar__clear-btn" onClick={handleOnClear}>
                 Clear
             </button>
         </div>
