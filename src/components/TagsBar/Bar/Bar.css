@@ -1,0 +1,22 @@
+.bar {
+  position: relative;
+  width: 80%;
+  padding: 15px 20px;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--background-light_gray);
+  top: -25px;
+  border-radius: 10px;
+}
+
+.bar__tags {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.bar__clear-btn {
+  width: 10%;
+}
