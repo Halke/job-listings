@@ -1,0 +1,15 @@
+.job-card-footer {
+  display: flex;
+  align-items: center;
+}
+
+.job-card-footer__dot-symbol {
+  margin: 0px 10px;
+}
+
+.job-card-footer h6 {
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--neutral-dark_gray);
+  font-family: "Spartan", sans-serif;
+}
