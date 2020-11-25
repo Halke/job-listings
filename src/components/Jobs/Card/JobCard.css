@@ -14,11 +14,14 @@
 
 .job-card__description,
 .job-card__tags {
-  width: 45%;
   min-width: 350px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+}
+
+.job-card__description {
+  padding-left: 30px;
 }
 
 .job-card__description-job-title {
