@@ -7,11 +7,27 @@ import Tag from "../../TagsBar/Tag/Tag";
 import Image from "../Image/Image";
 //import logo from "../../../images/photosnap.svg";
 
-function JobCard({companyName, newPost, featuredPost, position, tags}) {
-    
-    //const logo = require("../../../images/" + logoSource);
+function JobCard({jobInfo}) {
+   
+    console.log(jobInfo);
 
-    const featuredPostStyle = featuredPost ?
+    const {
+        company, 
+        new: isNew, 
+        featured,
+        position,
+        role,
+        level,
+        postedAt,
+        contract,
+        location,
+        languages,
+        tools} = jobInfo;
+    
+    
+    const tags = [role, level, ...languages, ...tools];
+
+    const featuredPostStyle = jobInfo.featured ?
     {
         borderLeft: "5px solid var(--primary-dark_red)"
     }
@@ -25,12 +41,12 @@ function JobCard({companyName, newPost, featuredPost, position, tags}) {
                     src={require("../../../images/" + logoSource)} 
                     alt="Company logo" 
                 /> */}
-                <Image companyName={companyName} />
+                <Image companyName={company} />
                 <div className="job-card__description-info">
                     <JobCardHeader 
-                        companyName={companyName} 
-                        newPost={newPost}
-                        featuredPost={featuredPost}
+                        companyName={company} 
+                        newPost={isNew}
+                        featuredPost={featured}
                     />
                     <div className="job-card__description-job-title-sect">
                         <h2 className="job-card__description-job-title">
@@ -47,8 +63,8 @@ function JobCard({companyName, newPost, featuredPost, position, tags}) {
             <div className="job-card__tags">
                 {tags.map((tag, index) => (
                     <Tag
-                        isDisabled={false}
                         className="job-card__tags-tag"
+                        isDisabled={false}
                         key={index} title={tag} 
                         removeable={false}
                     />
