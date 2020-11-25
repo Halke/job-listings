@@ -13,21 +13,23 @@ function JobCard({logoUrl, companyName, newPost, featuredPost, position, tags}) 
                     src={logoUrl} 
                     alt="Company logo" 
                 />
-                <JobCardHeader 
-                    companyName={companyName} 
-                    newPost={newPost}
-                    featuredPost={featuredPost}
-                />
-                <div className="job-card__description-job-title-sect">
-                    <h2 className="job-card__description-job-title">
-                        {position}
-                    </h2>
+                <div className="job-card__description-info">
+                    <JobCardHeader 
+                        companyName={companyName} 
+                        newPost={newPost}
+                        featuredPost={featuredPost}
+                    />
+                    <div className="job-card__description-job-title-sect">
+                        <h2 className="job-card__description-job-title">
+                            {position}
+                        </h2>
+                    </div>
+                    <JobCardFooter 
+                        postedAt="5 Days ago"
+                        contract="Part time"
+                        location="Europe"
+                    />
                 </div>
-                <JobCardFooter 
-                    postedAt="5 Days ago"
-                    contract="Part time"
-                    location="Europe"
-                />
             </div>
             <div className="job-card__tags">
                 {tags.map((tag, index) => (
