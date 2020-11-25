@@ -1,6 +1,7 @@
 .job-card {
   width: 80%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
@@ -14,19 +15,20 @@
 .job-card__description,
 .job-card__tags {
   width: 45%;
+  min-width: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/*
-*
-* JOB CARD - TAGS SECTION
-*
-*/
+.job-card__description-job-title {
+  margin: 10px 0;
+  transition: 0.15s;
+}
 
-.job-card__tags {
-  justify-content: flex-end;
+.job-card__description-job-title:hover {
+  color: var(--primary-dark_red);
+  cursor: pointer;
 }
 
 .job-card__description-info {
@@ -39,6 +41,18 @@
 
 /*
 *
+* JOB CARD - TAGS SECTION
+*
+*/
+
+.job-card__tags {
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  min-width: 200px;
+}
+
+/*
+*
 * Following rules are aiming HTML elements from "Tag.jsx" component
 *
 */
@@ -46,18 +60,19 @@
 .job-card__tags-tag {
   padding: 3px;
   border-radius: 5px;
+}
+
+.job-card__tags-tag .tag__title {
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
   transition: 0.2s;
 }
 
-.job-card__tags-tag h5 {
-  margin-right: 0px;
-  padding: 3px;
-}
-
-.job-card__tags-tag:hover {
+.job-card__tags-tag:hover .tag__title {
   background-color: var(--primary-dark_red);
 }
 
-.job-card__tags-tag:hover h5 {
+.job-card__tags-tag:hover .tag__title {
   color: var(--tags-light_gray);
 }
