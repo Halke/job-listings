@@ -54,9 +54,9 @@ function JobCard({jobInfo}) {
                         </h2>
                     </div>
                     <JobCardFooter 
-                        postedAt="5D ago"
-                        contract="Part time"
-                        location="Europe"
+                        postedAt={postedAt}
+                        contract={contract}
+                        location={location}
                     />
                 </div>
             </div>
