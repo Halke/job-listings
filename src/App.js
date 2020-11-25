@@ -5,7 +5,7 @@ import TagsContext from "./components/context/TagsContext";
 
 function App() {
 
-  const Context = useContext(TagsContext);
+  // const Context = useContext(TagsContext);
 
   const [tags, setTags] = useState([]);
 
@@ -25,9 +25,9 @@ function App() {
 
   return (
     <div className="App">
-      <Context.Provider>
+      <TagsContext.Provider>
         <Page value={{tags, addTag, removeTag, setToDefault}} />
-      </Context.Provider>
+      </TagsContext.Provider>
     </div>
   );
 }
