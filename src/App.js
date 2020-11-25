@@ -2,14 +2,12 @@ import React from "react";
 import './App.css';
 import Header from "./components/Header/Header";
 import Bar from "./components/TagsBar/Bar/Bar"
+import JobCard from "./components/Jobs/Card/JobCard";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <div className="App__bar-section">
-        <Bar />
-      </div>
+      
     </div>
   );
 }
