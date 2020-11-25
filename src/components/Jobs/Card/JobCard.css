@@ -19,6 +19,12 @@
   align-items: center;
 }
 
+/*
+*
+* JOB CARD - TAGS SECTION
+*
+*/
+
 .job-card__tags {
   justify-content: flex-end;
 }
@@ -30,6 +36,12 @@
   align-items: flex-start;
   margin-left: 20px;
 }
+
+/*
+*
+* Following rules are aiming HTML elements from "Tag.jsx" component
+*
+*/
 
 .job-card__tags-tag {
   padding: 3px;
