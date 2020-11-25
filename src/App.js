@@ -1,13 +1,11 @@
 import React from "react";
 import './App.css';
-import Header from "./components/Header/Header";
-import Bar from "./components/TagsBar/Bar/Bar"
-import JobCard from "./components/Jobs/Card/JobCard";
+import Page from "./components/Jobs/Page/Page";
 
 function App() {
   return (
     <div className="App">
-      
+      <Page />
     </div>
   );
 }
