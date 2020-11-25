@@ -28,7 +28,14 @@ function Page() {
             <div className="page__bar-section">
                 <Bar />
             </div>
-            
+
+            {jobs.map((job, index) => (
+                <JobCard 
+                    key={index}
+                    jobInfo={job}
+                />
+            ))}
+
             <JobCard 
                 companyName="Photosnap"
                 newPost={true}
