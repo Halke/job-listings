@@ -4,20 +4,20 @@ import "./JobCardHeader.css";
 function JobCardHeader({companyName, newPost, featuredPost}) {
     return (
         <div className="job-card-header">
-            <h4 className="job-card__description-head-company">
+            <h5 className="job-card__description-head-company">
                 {companyName}
-            </h4>
+            </h5>
             {newPost ? 
-                <h4 className="job-card__description-head-new">
-                    NEW
-                </h4> 
+                <h5 className="job-card__description-head-new">
+                    NEW!
+                </h5> 
                 : 
                 null
             }
             {featuredPost ? 
-                <h4 className="job-card__description-head-featured">
+                <h5 className="job-card__description-head-featured">
                     FEATURED
-                </h4> 
+                </h5> 
                 : 
                 null
             }

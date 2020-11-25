@@ -1,0 +1,25 @@
+.job-card-header {
+  display: flex;
+  align-items: center;
+}
+
+.job-card__description-head-company {
+  color: var(--primary-dark_red);
+  margin-right: 10px;
+}
+
+.job-card__description-head-new,
+.job-card__description-head-featured {
+  padding: 4px 8px;
+  color: var(--tags-light_gray);
+  border-radius: 12px;
+  margin: 0px 5px;
+}
+
+.job-card__description-head-new {
+  background-color: var(--primary-dark_red);
+}
+
+.job-card__description-head-featured {
+  background-color: var(--neutral-very_dark_gray);
+}
