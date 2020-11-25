@@ -8,11 +8,11 @@ import Tag from "../../TagsBar/Tag/Tag";
 function JobCard({logoUrl, companyName, newPost, featuredPost, position, tags}) {
     return (
         <div className="job-card">
-            <img className="job-card__image" 
-                src={logoUrl} 
-                alt="Company logo" 
-            />
             <div className="job-card__description">
+                <img className="job-card__description-image" 
+                    src={logoUrl} 
+                    alt="Company logo" 
+                />
                 <JobCardHeader 
                     companyName={companyName} 
                     newPost={newPost}
@@ -23,10 +23,21 @@ function JobCard({logoUrl, companyName, newPost, featuredPost, position, tags}) 
                         {position}
                     </h2>
                 </div>
-                <JobCardFooter />
+                <JobCardFooter 
+                    postedAt="5 Days ago"
+                    contract="Part time"
+                    location="Europe"
+                />
             </div>
             <div className="job-card__tags">
-                {tags.map((tag, index) => <Tag key={index} title={tag} removeable={false}/>)}
+                {tags.map((tag, index) => (
+                    <Tag 
+                        className="job-card__tags-tag"
+                        key={index} title={tag} 
+                        removeable={false}
+                    />
+                    )
+                )}
             </div>
         </div>
     )
