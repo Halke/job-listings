@@ -7,18 +7,25 @@ import Tag from "../../TagsBar/Tag/Tag";
 import Image from "../Image/Image";
 //import logo from "../../../images/photosnap.svg";
 
-function JobCard({logoSource, companyName, newPost, featuredPost, position, tags}) {
+function JobCard({companyName, newPost, featuredPost, position, tags}) {
     
     //const logo = require("../../../images/" + logoSource);
 
+    const featuredPostStyle = featuredPost ?
+    {
+        borderLeft: "5px solid var(--primary-dark_red)"
+    }
+    :
+    null;
+
     return (
-        <div className="job-card">
+        <div className="job-card" style={featuredPostStyle}>
             <div className="job-card__description">
                 {/* <img className="job-card__description-image" 
                     src={require("../../../images/" + logoSource)} 
                     alt="Company logo" 
                 /> */}
-                <Image companyName="Photosnap" />
+                <Image companyName={companyName} />
                 <div className="job-card__description-info">
                     <JobCardHeader 
                         companyName={companyName} 
