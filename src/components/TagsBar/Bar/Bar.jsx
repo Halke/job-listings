@@ -11,9 +11,9 @@ function Bar() {
     return (
         <div className="bar">
             <div className="bar__tags">
-                <Tag title="Frontend" />
-                <Tag title="Backend" />
-                <Tag title="Junior" />
+                <Tag isDisabled={true} title="Frontend" />
+                <Tag isDisabled={true} title="Backend" />
+                <Tag isDisabled={true} title="Junior" />
             </div>
             <button className="bar__clear-btn" onClick={handleOnClear}>
                 Clear
