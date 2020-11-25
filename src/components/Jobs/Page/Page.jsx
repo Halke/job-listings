@@ -6,8 +6,6 @@ import "./Page.css";
 
 function Page() {
 
-    //const jsonFilePath = "data.json";
-
     const [jobs, setJobs] = useState([]);
 
     useEffect(() => {
@@ -29,27 +27,15 @@ function Page() {
                 <Bar />
             </div>
 
-            {jobs.map((job, index) => (
+            {jobs !== undefined ? 
+            jobs.map((job) => (
                 <JobCard 
-                    key={index}
+                    key={job.id}
                     jobInfo={job}
                 />
-            ))}
-
-            <JobCard 
-                companyName="Photosnap"
-                newPost={true}
-                featuredPost={true}
-                position="Senior Frontend Developer"
-                tags={["Senior", "Frontend", "HTML", "CSS", "JavaScript"]}
-            />
-            <JobCard 
-                companyName="Insure"
-                newPost={true}
-                featuredPost={false}
-                position="Senior Frontend Developer"
-                tags={["Senior", "Frontend", "HTML", "CSS", "JavaScript"]}
-            />
+            ))
+            :
+            null} 
         </div>
     )
 }
