@@ -1,11 +1,9 @@
-import React, {useContext, useState} from "react";
+import React, { useState} from "react";
 import './App.css';
 import Page from "./components/Jobs/Page/Page";
 import TagsContext from "./components/context/TagsContext";
 
 function App() {
-
-  // const Context = useContext(TagsContext);
 
   const [tags, setTags] = useState([]);
 
