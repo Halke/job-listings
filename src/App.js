@@ -5,29 +5,29 @@ import TagsContext from "./components/context/TagsContext";
 
 function App() {
 
-  const [tags, setTags] = useState([]);
+  // const [tags, setTags] = useState([]);
 
-  const addTag = (tag) => {
-    if(!tags.includes(tag)){
-      setTags(prevTags => [...prevTags, tag]);
-    }
-  }
+  // const addTag = (tag) => {
+  //   if(!tags.includes(tag)){
+  //     setTags(prevTags => [...prevTags, tag]);
+  //   }
+  // }
 
-  const removeTag = (tag) => {
-    setTags(prevTags => {
-      return prevTags.filter(t => t !== tag);
-    });
-  }
+  // const removeTag = (tag) => {
+  //   setTags(prevTags => {
+  //     return prevTags.filter(t => t !== tag);
+  //   });
+  // }
 
-  const setToDefault = () => {
-    setTags([]);
-  }
+  // const setToDefault = () => {
+  //   setTags([]);
+  // }
 
   return (
     <div className="App">
-      <TagsContext.Provider value={{tags, addTag, removeTag, setToDefault}}>
+      <TagsContext>
         <Page />
-      </TagsContext.Provider>
+      </TagsContext>
     </div>
   );
 }
