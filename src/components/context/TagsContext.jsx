@@ -1,10 +1,5 @@
-import React, {createContext} from "react";
+import {createContext} from "react";
 
-const TagsContext = createContext({
-    tags: [],
-    addTag: (tag) => {},
-    removeTag: (tag) => {},
-    setToDefault: () => {}
-});
+const TagsContext = createContext();
 
 export default TagsContext;
