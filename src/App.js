@@ -8,7 +8,9 @@ function App() {
   const [tags, setTags] = useState([]);
 
   const addTag = (tag) => {
-    setTags(prevTags => [...prevTags, tag]);
+    if(!tags.includes(tag)){
+      setTags(prevTags => [...prevTags, tag]);
+    }
   }
 
   const removeTag = (tag) => {
