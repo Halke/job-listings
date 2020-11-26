@@ -1,19 +1,31 @@
-import React from 'react'
+import React, {useState, useContext} from 'react'
 import "./Bar.css";
 import Tag from "../Tag/Tag";
+import TagsContext from "../../context/TagsContext";
 
 function Bar() {
 
+    const context = useContext(TagsContext);
+
     const handleOnClear = () => {
-        console.log("Clicked on CLEAR!");
+        context.setToDefault();
     }
 
     return (
-        <div className="bar">
+        <div 
+            className={
+                (context.tags.length > 0 ? "bar__fade-in " 
+                : 
+                "bar__fade-out ") + "bar"
+            }
+        >
             <div className="bar__tags">
-                <Tag isDisabled={true} title="Frontend" />
-                <Tag isDisabled={true} title="Backend" />
-                <Tag isDisabled={true} title="Junior" />
+                {context.tags.map(tag => (
+                    <Tag 
+                        isDisabled={true} 
+                        title={tag}
+                    />
+                ))}
             </div>
             <button className="bar__clear-btn" onClick={handleOnClear}>
                 Clear
