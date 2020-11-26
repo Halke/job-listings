@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import "./Bar.css";
 import Tag from "../Tag/Tag";
-import TagsContext from "../../context/TagsContext";
+import {TagsContext} from "../../context/TagsContext";
 
 function Bar() {
 

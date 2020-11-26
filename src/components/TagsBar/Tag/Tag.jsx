@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import TagsContext from "../../context/TagsContext";
+import {TagsContext} from "../../context/TagsContext";
 import "./Tag.css";
 
 function Tag({title, removeable=true, className="", isDisabled}) {
@@ -16,9 +16,6 @@ function Tag({title, removeable=true, className="", isDisabled}) {
 
     return (
         <div className={"tag " + className}>
-            {/* <h5 className="tag__title">
-                {title}
-            </h5> */}
             <button disabled={isDisabled ? true : false} 
                 id={isDisabled ? null : title} 
                 onClick={handleClick} 
@@ -32,12 +29,8 @@ function Tag({title, removeable=true, className="", isDisabled}) {
                 id={title}
                 onClick={handleDelete}
                 className="tag__delete-btn"
-            >
-                {/* <img className="tag__delete-btn-image" 
-                    src={"/src/images/icon-remove.svg"}
-                    alt="Remove icon"
-                /> */}
-            </button>
+            />
+
             )
             :
             null}
