@@ -23,8 +23,8 @@ function App() {
 
   return (
     <div className="App">
-      <TagsContext.Provider>
-        <Page value={{tags, addTag, removeTag, setToDefault}} />
+      <TagsContext.Provider value={{tags, addTag, removeTag, setToDefault}}>
+        <Page />
       </TagsContext.Provider>
     </div>
   );
