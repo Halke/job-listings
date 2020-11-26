@@ -1,5 +1,33 @@
-import {createContext} from "react";
+import React, {useState, createContext} from "react";
 
-const TagsContext = createContext();
+export const TagsContext = createContext();
 
-export default TagsContext;
+function Context({children}) {
+
+    const [tags, setTags] = useState([]);
+
+    const addTag = (tag) => {
+        if(!tags.includes(tag)){
+            setTags(prevTags => [...prevTags, tag]);
+        }
+    }
+
+    const removeTag = (tag) => {
+        setTags(prevTags => {
+            return prevTags.filter(t => t !== tag);
+        });
+    }
+
+    const setToDefault = () => {
+        setTags([]);
+    }
+
+    return (
+        <TagsContext.Provider value={{tags, addTag, removeTag, setToDefault}}>
+            {children}
+        </TagsContext.Provider>
+    )
+
+}
+
+export default Context;
