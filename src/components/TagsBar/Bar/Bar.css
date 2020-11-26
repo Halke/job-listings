@@ -12,7 +12,7 @@
   border-radius: 5px;
   -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
-  margin-bottom: 60px;
+  margin-bottom: 0px;
 }
 
 .bar__tags {
@@ -34,4 +34,17 @@
 
 .bar__clear-btn:hover {
   border-bottom: 2px solid var(--primary-dark_red);
+}
+
+.bar__fade-out {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+}
+.bar__fade-in {
+  opacity: 1;
+  width: 100px;
+  height: 100px;
+  transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
 }
