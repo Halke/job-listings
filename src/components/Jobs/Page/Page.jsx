@@ -1,12 +1,16 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useContext} from 'react'
 import Header from "../../Header/Header";
 import JobCard from "../Card/JobCard";
 import Bar from "../../TagsBar/Bar/Bar";
+import TagsContext from "../../context/TagsContext";
 import "./Page.css";
 
 function Page() {
 
+    const context = useContext(TagsContext);
+
     const [jobs, setJobs] = useState([]);
+    const [filteredJobs, setFilteredJobs] = useState([]);
 
     useEffect(() => {
         fetch("data.json", {
@@ -20,6 +24,7 @@ function Page() {
         .catch(err => console.log("ERROR: ", err))
     }, []);
 
+
     return (
         <div className="page">
             <Header />
@@ -27,7 +32,7 @@ function Page() {
                 <Bar />
             </div>
 
-            {jobs !== undefined ? 
+            {(jobs !== undefined && filteredJobs.length === 0) ? 
             jobs.map((job) => (
                 <JobCard 
                     key={job.id}
@@ -35,7 +40,12 @@ function Page() {
                 />
             ))
             :
-            null} 
+            filteredJobs.map((job) => (
+                <JobCard 
+                    key={job.id}
+                    jobInfo={job}
+                />
+            ))} 
         </div>
     )
 }
