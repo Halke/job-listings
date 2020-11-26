@@ -5,11 +5,8 @@ import JobCardHeader from '../JobCardHeader/JobCardHeader';
 import JobCardFooter from "../JobCardFooter/JobCardFooter";
 import Tag from "../../TagsBar/Tag/Tag";
 import Image from "../Image/Image";
-//import logo from "../../../images/photosnap.svg";
 
 function JobCard({jobInfo}) {
-   
-    console.log(jobInfo);
 
     const {
         company, 
