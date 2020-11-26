@@ -1,14 +1,17 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import TagsContext from "../../context/TagsContext";
 import "./Tag.css";
 
 function Tag({title, removeable=true, className="", isDisabled}) {
 
+    const context = useContext(TagsContext);
+
     const handleClick = (e) => {
-        console.log(e.target.id);
+        context.addTag(e.target.id);
     }
 
     const handleDelete = (e) => {
-        console.log(e.target.id);
+        context.removeTag(e.target.id);
     }
 
     return (
