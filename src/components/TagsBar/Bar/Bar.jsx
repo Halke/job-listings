@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react'
+import React, {useContext} from 'react'
 import "./Bar.css";
 import Tag from "../Tag/Tag";
 import TagsContext from "../../context/TagsContext";
