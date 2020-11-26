@@ -4,7 +4,9 @@ export const TagsContext = createContext();
 
 function Context({children}) {
 
-    const [tags, setTags] = useState([]);
+    const initialState = [];
+
+    const [tags, setTags] = useState(initialState);
 
     const addTag = (tag) => {
         if(!tags.includes(tag)){
@@ -19,7 +21,7 @@ function Context({children}) {
     }
 
     const setToDefault = () => {
-        setTags([]);
+        setTags(initialState);
     }
 
     return (
