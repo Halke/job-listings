@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Image.css";
 import account from "../../../images/account.svg";
 import eyecamCo from "../../../images/eyecam-co.svg";
 import faceIt from "../../../images/faceit.svg";
@@ -25,7 +26,7 @@ images.set("The Air Filter Company", theAirFilterCompany);
 
 function Image({companyName}) {
 
-    return <img src={images.get(companyName)} alt="Company logo" />
+    return <img className="image" src={images.get(companyName)} alt="Company logo" />
 }
 
 export default Image
