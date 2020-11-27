@@ -57,6 +57,7 @@ function JobCard({jobInfo}) {
                     />
                 </div>
             </div>
+            <hr className="job-card__horizontal-line" />
             <div className="job-card__tags">
                 {tags.map((tag, index) => (
                     <Tag
