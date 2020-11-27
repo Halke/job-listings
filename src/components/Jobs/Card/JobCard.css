@@ -17,9 +17,6 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-}
-
-.job-card__description {
   padding-left: 30px;
 }
 
@@ -95,9 +92,47 @@
     flex-direction: column;
   }
 
+  .job-card__description {
+    min-width: auto;
+    flex-wrap: wrap;
+    padding-left: 0;
+    align-items: flex-start;
+  }
+
   .job-card__horizontal-line {
     display: block;
     width: 100%;
     margin: 20px 0px;
+    color: var(--neutral-dark_gray);
+  }
+
+  .job-card__tags {
+    min-width: auto;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .job-card {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 0px;
+  }
+
+  .job-card__description-info {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+
+  .image {
+    position: relative;
+    width: 50px !important;
+    height: 50px !important;
+    top: -25px;
+  }
+
+  .job-card__description-job-title {
+    margin: 15px 0;
   }
 }

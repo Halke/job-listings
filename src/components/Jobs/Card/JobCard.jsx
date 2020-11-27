@@ -38,7 +38,7 @@ function JobCard({jobInfo}) {
                     src={require("../../../images/" + logoSource)} 
                     alt="Company logo" 
                 /> */}
-                <Image companyName={company} />
+                <Image className="job-card__description-image" companyName={company} />
                 <div className="job-card__description-info">
                     <JobCardHeader 
                         companyName={company} 
