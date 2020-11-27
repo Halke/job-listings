@@ -20,8 +20,9 @@ function Bar() {
             }
         >
             <div className="bar__tags">
-                {context.tags.map(tag => (
+                {context.tags.map((tag, index) => (
                     <Tag 
+                        key={index}
                         isDisabled={true} 
                         title={tag}
                     />
