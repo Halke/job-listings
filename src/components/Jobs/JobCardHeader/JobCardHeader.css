@@ -11,7 +11,7 @@
 
 .job-card__description-head-new,
 .job-card__description-head-featured {
-  padding: 4px 8px;
+  padding: 8px 8px 4px 8px;
   color: var(--tags-light_gray);
   border-radius: 12px;
   margin: 0px 5px;
